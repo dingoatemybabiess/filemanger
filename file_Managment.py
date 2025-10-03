@@ -109,7 +109,7 @@ if __name__ == "__main__":
         "Notbooks": [".ipynb"],
         "dev": [".py", ".js", ".html", ".css", ".json", ".xml", ".c", ".cpp", ".java", ".rb", ".go", ".rs"]
     }
-    downloads_folder = os.path.expanduser("C:/Users/ghoni/Downloads")
+    downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
     fm.organize_existing_files(downloads_folder, rules)
     fm.organize_downloads(downloads_folder, rules)
 # Note: To stop the monitoring, you can interrupt the program (e.g., Ctrl+C in terminal).
