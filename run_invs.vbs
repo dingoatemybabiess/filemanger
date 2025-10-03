@@ -9,8 +9,7 @@ strFolderPath = fso.GetParentFolderName(strScriptPath)
 strBatchPath = """" & strFolderPath & "\file_manager.bat" & """"
 
 ' Run the batch file hidden and asynchronously
-WshShell.Run strBatchPath, 0
-, False
+WshShell.Run strBatchPath, 0, False
 
 Set WshShell = Nothing
 Set fso = Nothing
