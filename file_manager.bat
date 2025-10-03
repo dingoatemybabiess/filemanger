@@ -1,3 +1,3 @@
 @echo off
-python "%~dp0file_Managment.py"
+python "%~dp0file_Managment.py" 
 
