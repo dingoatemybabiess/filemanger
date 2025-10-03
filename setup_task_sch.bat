@@ -6,6 +6,9 @@ if %errorlevel% neq 0 (
     powershell -Command "Start-Process -FilePath '%~f0' -Verb runAs"
     exit /b
 )
+@echo off
+:: Install watchdog package if not already installed
+python -m pip install --upgrade watchdog
 
 REM Creates a Task Scheduler task to run run_hidden.vbs on user logon
 
