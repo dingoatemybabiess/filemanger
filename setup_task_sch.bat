@@ -10,9 +10,10 @@ if %errorlevel% neq 0 (
 :: Install watchdog package if not already installed
 python -m pip install --upgrade watchdog
 
-REM Creates a Task Scheduler task to run run_hidden.vbs on user logon
+REM Creates a Task Scheduler task to run run_invs.vbs on user logon
 
-schtasks /Create /TN "FileManager" /TR "\"%~dpx0run_invs.vbs\"" /SC ONSTART /RL HIGHEST /F
+schtasks /Create /TN "FileManager" /TR "\"wscript.exe\" \"%~dp0run_invs.vbs\"" /SC ONSTART /RL HIGHEST /F
+schtasks /Run /TN "FileManager"
 
 echo Task Scheduler entry created.
 pause
