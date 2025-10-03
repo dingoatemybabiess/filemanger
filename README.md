@@ -15,15 +15,14 @@ This repository contains scripts to monitor and organize your Downloads folder a
 ## Setup Instructions
 
 1. Ensure you have Python (Anaconda or system Python) installed.
-2. Edit `file_manager.bat` to point to your python executable path if different.
-3. Run `file_Managment.py` manually one time to test functionality.
-4. To run silently, double-click `run_inv.vbs`.
-5. (Optional) To configure auto run on startup:
-   - Run `setup_task_sch.bat` as Administrator.
-   - This creates a scheduled task that auto-starts the monitoring script on login.
+2. run `setup_task_sch.bat` this will run as Adminstrator.
+3. enshure the program ran properly by opiening
+4. task scheduler then search in task scheduler library for FileManager
+5. optional: press right click then run it
 
 ## Troubleshooting
 
+- Edit `file_manager.bat` to point to your python executable path if different.
 - Check paths in `.bat` and `.vbs` files.
 - Verify Python environment and package installations.
 - Use Task Scheduler UI or `schtasks /Query` to check the task status.
